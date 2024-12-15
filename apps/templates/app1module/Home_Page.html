@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}">
+<h1>Welcome to the Videw Gamed System</h1>
+<img src="{% static '/images/R.jpg'%}"width="200"
+height="200"/>
+    <p>Navigate to the following pages:</p>
+    <ul>
+        <li><a href="{% url 'Home_Page' %}">Home Page</a></li>
+        <li>
+            <a href="{% url 'List_Games'%}">
+                List Games 
+            </a>
+        </li>
+    </ul>
+<br>
+{% endblock content %}

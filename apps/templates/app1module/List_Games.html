@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game List</title>
+    {% load static %}
+    <title>Home - LSTM Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}">
+</head>
+<body>
+    <h1>Games and Their Developers</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Game Title</th>
+                <th>Developer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td>{{ book.Title }}</td>
+                <td>{{ book.Developer.Name }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2">No books found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
